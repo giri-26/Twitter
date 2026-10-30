@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Twingler - Share Your Thoughts</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">Twingler</span></div>
+
+        <div class="nav-actions">
+            <button id="themeBtn" aria-label="Toggle dark mode">
+                🌙
+            </button>
+
+            <div class="profile">
+                <div class="avatar">G</div>
+                <span>GIRI</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <h3>Menu</h3>
+
+            <button class="menu-btn active" data-filter="all">
+                🏠 All Posts
+            </button>
+
+            <button class="menu-btn" data-filter="liked">
+                ❤️ Liked Posts
+            </button>
+
+            <div class="sidebar-info">
+                <h3>About Twingler</h3>
+                <p>Share your thoughts, connect with people,
+                   and join the conversation.</p>
+            </div>
+        </aside>
+
+        <!-- Main Feed -->
+        <section class="feed">
+
+            <h2 id="feedTitle">Explore Posts</h2>
+
+            <!-- Create Post -->
+            <div class="create-post">
+
+                <div class="avatar">G</div>
+
+                <div class="composer">
+                    <textarea
+                        id="postInput"
+                        maxlength="280"
+                        placeholder="What's happening?"
+                        aria-label="Write your post"
+                    ></textarea>
+
+                    <div class="composer-footer">
+                        <span id="charCount">0 / 280</span>
+
+                        <button id="postBtn" class="primary-btn">
+                            Publish
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Search -->
+            <div class="search-box">
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="🔍 Search posts or authors..."
+                    aria-label="Search posts"
+                >
+            </div>
+
+            <!-- Post Feed -->
+            <div id="postFeed" aria-live="polite"></div>
+
+            <p id="emptyMessage" class="empty-message" hidden>
+                No posts found. Be the first to share something!
+            </p>
+
+        </section>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+
+            <div class="widget">
+                <h3>📊 Your Activity</h3>
+
+                <div class="stat">
+                    <span>Your Posts</span>
+                    <strong id="totalPosts">0</strong>
+                </div>
+
+                <div class="stat">
+                    <span>Total Likes</span>
+                    <strong id="totalLikes">0</strong>
+                </div>
+
+                <div class="stat">
+                    <span>Comments</span>
+                    <strong id="totalComments">0</strong>
+                </div>
+            </div>
+
+            <div class="widget">
+                <h3>💡 Community Tips</h3>
+                <p>Be respectful.</p>
+                <p>Share useful ideas.</p>
+                <p>Keep your posts positive.</p>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Twingler</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
